@@ -1,0 +1,142 @@
+:root {
+	--color1: #025464;
+	--color2: #e57c23;
+	--color3: #e8aa42;
+	--color4: #f8f1f1;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	height: 100vh;
+	background-color: var(--color4);
+}
+.copyright {
+	color: #111;
+	font-family: "Arial", sans-serif;
+	font-size: 12px;
+}
+
+.mainPage {
+	display: none;
+	width: 30%;
+	background-color: var(--color3);
+	padding: 8px 16px;
+	border-radius: 5px;
+}
+.title {
+	color: var(--color1);
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+}
+.startBtn {
+	width: 100%;
+	background-color: var(--color2);
+	color: var(--color4);
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	letter-spacing: 1px;
+	margin: 15px 0px 5px 0px;
+	padding: 5px 0;
+	border: 2px solid var(--color4);
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+}
+.startBtn:hover {
+	background-color: var(--color4);
+	color: var(--color2);
+	font-weight: bold;
+}
+
+.userCheck {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	width: 40%;
+	background-color: var(--color3);
+	padding: 10px 0;
+}
+.form-title {
+	color: var(--color1);
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+}
+.form-center {
+	width: 80%;
+}
+.input-box {
+	display: flex;
+	font-family: "Roboto", sans-serif;
+}
+.input-box label {
+	background-color: var(--color2);
+	color: var(--color4);
+	padding: 10px;
+}
+.input-box input {
+	width: 100%;
+	font-family: "Arial", sans-serif;
+	padding: 0 5px;
+	border: 2px solid var(--color2);
+	border-left: none;
+	outline: none;
+}
+.input-box input::placeholder {
+}
+
+.questionPage {
+	/* display: none; */
+	width: 40%;
+	background-color: var(--color3);
+	padding: 8px 14px;
+}
+.question-title {
+	color: var(--color1);
+	font-family: "Poppins", sans-serif;
+}
+.answers {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin: 20px 0 15px 0;
+}
+.answer-box {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.answer-box span {
+	font-family: "Roboto", sans-serif;
+}
+.actions {
+	display: flex;
+	justify-content: space-between;
+}
+.actionBtn {
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50px;
+}
+.actionBtn i {
+	font-size: 30px;
+}
+.preBtn i {
+	color: red;
+}
+.nextBtn i {
+	color: limegreen;
+}
+
+.show-page {
+	display: block !important;
+}

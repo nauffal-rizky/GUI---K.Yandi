@@ -1,86 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>GUI - Quesioneries</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUI - Quesioneries</title>
 
-		<link rel="stylesheet" href="index.css" />
-		<script
-			src="https://kit.fontawesome.com/1160dd891b.js"
-			crossorigin="anonymous"
-		></script>
-	</head>
-	<body>
-		<section class="mainPage show-page">
-			<h1 class="title">Let's see how far you have become!!!</h1>
-			<button class="startBtn">Start!</button>
-			<span class="copyright">&copy; k.nauffal k.yandi</span>
-		</section>
-		<section class="userCheck">
-			<h1 class="form-title">Personal Information</h1>
-			<form action="" class="form-center">
-				<div class="input-box">
-					<label for="name">Name</label>
-					<input
-						type="text"
-						name="name"
-						id="name"
-						placeholder="input your name..."
-						autocomplete="off"
-					/>
-				</div>
-				<div class="input-slide">
-					<div class="age-slide">
-						<label for="">Age</label>
-						<input type="text" />
-					</div>
-					<div class="edu-slide">
-						<label for="">Education</label>
-						<input type="text" />
-					</div>
-				</div>
-			</form>
-		</section>
-		<section class="questionPage">
-			<article class="question-row">
-				<h1 class="question-title">
-					<span class="questionNum">1.)</span> Lorem ipsum dolor sit amet.?
-				</h1>
-				<div class="answers">
-					<div class="answer-box">
-						<input type="checkbox" />
-						<span>Lorem ipsum dolor sit amet.</span>
-					</div>
-					<div class="answer-box">
-						<input type="checkbox" />
-						<span>Lorem ipsum dolor sit amet.</span>
-					</div>
-					<div class="answer-box">
-						<input type="checkbox" />
-						<span>Lorem ipsum dolor sit amet.</span>
-					</div>
-					<div class="answer-box">
-						<input type="checkbox" />
-						<span>Lorem ipsum dolor sit amet.</span>
-					</div>
-					<div class="answer-box">
-						<input type="checkbox" />
-						<span>Lorem ipsum dolor sit amet.</span>
-					</div>
-				</div>
-				<div class="actions">
-					<button class="preBtn actionBtn">
-						<i class="fa-solid fa-circle-left"></i>
-					</button>
-					<button class="nextBtn actionBtn">
-						<i class="fa-solid fa-circle-right"></i>
-					</button>
-				</div>
-			</article>
-		</section>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://kit.fontawesome.com/1160dd891b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section class="mainPage">
+      <div class="intro">
+        <h1 class="title">Selamat datang di <a href="https://ciptamandiri.net/">Yayasan Cipta Mandiri</a></h1>
+        <p class="desc">
+          Test ini bertujuan untuk mengetahui kelas apa yang cocok untuk kamu. Jika ada pertanyaan yang tidak bisa kamu jawab, sebaiknya jawab "saya tidak tahu" karena tidak mengurangi poin.
+          Sebaliknya jika kamu salah dalam mennjawab, poin kamu akan dikurangi. Tetap semangat!!!
+        </p>
+      </div>
+      <div class="action">
+        <button class="startBtn">Start!</button>
+      </div>
+      <span class="copyright">&copy; k.nauffal k.yandi</span>
+    </section>
+    <section class="userCheck show-page">
+      <h1 class="form-title">Personal Information</h1>
+      <form action="" class="form-center">
+        <div class="input-box">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="input your name..." autocomplete="off" required />
+        </div>
+        <div class="input-slide">
+          <div class="age-slide dropdown">
+            <div class="action">
+              <div class="title-contain answer-contain">
+                <span class="age-title">Age</span>
+                <i class="fa-solid fa-circle-xmark"></i>
+                <span>17 tahun</span>
+              </div>
+              <i id="dropdownBtn" class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="option">
+              <span>8 tahun</span>
+              <span>9 tahun</span>
+              <span>10 tahun</span>
+              <span>11 tahun</span>
+              <span>12 tahun</span>
+              <span>13 tahun</span>
+              <span>14 tahun</span>
+              <span>15 tahun</span>
+              <span>16 tahun</span>
+              <span>17 tahun</span>
+              <span>18 tahun</span>
+              <span>19 tahun</span>
+              <span>20 tahun</span>
+              <span>21 tahun</span>
+              <span>22 tahun</span>
+              <span>23 tahun</span>
+            </div>
+          </div>
+          <div class="edu-slide dropdown">
+            <div class="action">
+              <div class="title-contain">
+                <span class="edu-title">Education</span>
+              </div>
+              <i id="dropdownBtn" class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="option">
+              <span>SD/sederajat</span>
+              <span>SMP/sederajat</span>
+              <span>SMA/sederajat</span>
+              <span>Kuliah/Lulus SMA</span>
+            </div>
+          </div>
+          <button class="submitBtn">Kirim!</button>
+        </div>
+      </form>
+    </section>
+    <section class="questionPage">
+      <article class="question-row">
+        <h1 class="question-title"><span class="questionNum">1.)</span> Lorem ipsum dolor sit amet.?</h1>
+        <form class="answers">
+          <div class="answer-box">
+            <input type="radio" name="answer" id="answer-a" />
+            <label for="answer-a">Lorem ipsum dolor sit amet.</label>
+          </div>
+          <div class="answer-box">
+            <input type="radio" name="answer" id="answer-a" />
+            <label for="answer-a">Lorem ipsum dolor sit amet.</label>
+          </div>
+          <div class="answer-box">
+            <input type="radio" name="answer" id="answer-a" />
+            <label for="answer-a">Lorem ipsum dolor sit amet.</label>
+          </div>
+          <div class="answer-box">
+            <input type="radio" name="answer" id="answer-a" />
+            <label for="answer-a">Lorem ipsum dolor sit amet.</label>
+          </div>
+          <div class="answer-box">
+            <input type="radio" name="answer" id="answer-a" />
+            <label for="answer-a">Lorem ipsum dolor sit amet.</label>
+          </div>
+          <div class="answer-box">
+            <input type="radio" name="answer" id="answer-a" />
+            <label for="answer-a">Lorem ipsum dolor sit amet.</label>
+          </div>
+          <div class="actions">
+            <button class="preBtn actionBtn">
+              <i class="fa-solid fa-circle-left"></i>
+            </button>
+            <button class="nextBtn actionBtn">
+              <i class="fa-solid fa-circle-right"></i>
+            </button>
+          </div>
+        </form>
+      </article>
+    </section>
 
-		<script src="index.js"></script>
-	</body>
+    <script src="index.js"></script>
+  </body>
 </html>

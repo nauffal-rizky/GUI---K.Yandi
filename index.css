@@ -166,8 +166,16 @@ body {
 .dropdown .action {
   display: flex;
 }
+.age-slide.show-answer .action,
+.age-slide.show-answer .option {
+  width: 131px !important;
+}
+.edu-slide.show-answer .action,
+.edu-slide.show-answer .option {
+  width: 190px !important;
+}
 .age-slide .action {
-  width: 100px;
+  width: 90px;
 }
 .dropdown .action .title-contain {
   width: 100%;
@@ -181,16 +189,27 @@ body {
   border-right: none;
   outline: none;
 }
-.answer-contain {
-  display: flex;
+.show-answer .title-contain {
+  padding: 10px 5px !important;
 }
-.answer-contain .age-title,
-.answer-contain .edu-title {
+.show-answer .title-contain div {
+  display: flex;
+  gap: 5px;
+}
+.show-answer .title-contain div span {
+  width: 100%;
+  text-align: center;
+}
+.show-answer .age-title,
+.show-answer .edu-title {
   display: none;
 }
-.answer-contain i {
+.show-answer .cancelBtn {
   display: flex;
   align-items: center;
+  background-color: #fff;
+  color: red;
+  border-radius: 50%;
 }
 .dropdown .action #dropdownBtn {
   display: flex;
@@ -208,10 +227,10 @@ body {
   border: 2px solid var(--color2);
 }
 .age-slide .option {
-  width: 100px;
+  width: 90px;
   height: 0;
   overflow-y: scroll;
-  transition: all 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 .age-slide .option::-webkit-scrollbar {
   width: 5px;
@@ -232,19 +251,20 @@ body {
   font-family: 'Arial', sans-serif;
   text-align: center;
   padding: 5px 8px;
+  cursor: pointer;
 }
 .dropdown .option span:hover {
   background-color: var(--color1);
   color: var(--color4);
 }
 .edu-slide .action {
-  width: 165px;
+  width: 143px;
 }
 .edu-slide .option {
-  width: 165px;
+  width: 143px;
   height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 
 .questionPage {

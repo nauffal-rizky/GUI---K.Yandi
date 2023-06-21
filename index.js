@@ -1,3 +1,6 @@
+// PERSONAL DATA
+let students = [];
+
 const mainPage = document.querySelector('.mainPage');
 const userCheck = document.querySelector('.userCheck');
 const startBtn = document.querySelector('.startBtn');
@@ -23,11 +26,12 @@ const ageAnswer = ageOption.querySelectorAll('span');
 ageAnswer.forEach((answer) => {
   answer.addEventListener('click', () => {
     const answerValue = answer.innerText;
+    console.log(answerValue);
 
     const showAnswer = document.createElement('div');
     showAnswer.innerHTML = `
       <i class="fa-solid fa-circle-xmark cancelBtn"></i>
-      <span>${answerValue}</span>
+      <span id="ageAnswer" >${answerValue}</span>
     `;
 
     const titleContain = ageSlide.querySelector('.title-contain');
@@ -43,11 +47,6 @@ ageAnswer.forEach((answer) => {
         titleContain.removeChild(showAnswer);
         ageOption.style.height = 0;
       });
-    } else {
-      console.log(answerValue);
-
-      // titleContain.removeChild(showAnswer);
-      titleContain.appendChild(showAnswer);
     }
   });
 });
@@ -70,13 +69,13 @@ eduAnswer.forEach((answer) => {
     const showAnswer = document.createElement('div');
     showAnswer.innerHTML = `
       <i class="fa-solid fa-circle-xmark cancelBtn"></i>
-      <span>${answer.innerText}</span>
+      <span id="eduAnswer" >${answer.innerText}</span>
     `;
 
+    const titleContain = eduSlide.querySelector('.title-contain');
     if (!eduSlide.classList.contains('show-answer')) {
       eduSlide.classList.add('show-answer');
 
-      const titleContain = eduSlide.querySelector('.title-contain');
       titleContain.appendChild(showAnswer);
       eduOption.style.height = 0;
 
@@ -91,4 +90,12 @@ eduAnswer.forEach((answer) => {
 });
 
 const submitBtn = document.querySelector('.submitBtn');
-submitBtn.addEventListener('click', () => {});
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const age = document.getElementById('ageAnswer').value;
+  const edu = document.getElementById('eduAnswer').value;
+
+  students.push();
+});
